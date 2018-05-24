@@ -1,34 +1,82 @@
 <html>
 <head>
-<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<link rel="icon" href="https://78.media.tumblr.com/fcfc78f8f666f397463e35868b11d776/tumblr_inline_mg8f7hUkxA1rx2fz3.jpg"/>
 <title>Elle's projects</title>
 <style type="text/css">
+*{
+	transition: 0.2s linear;
+}
 body{
-	background-image:url('https://78.media.tumblr.com/cdedc082f3c7eeaf7c2e9ec30aacd283/tumblr_movdbcThVO1ru3nbdo1_250.png');
+	background-image:url('https://78.media.tumblr.com/3b627fa2140cf18ad9dc4d8137619b81/tumblr_noxf4sgyN21ru3nbdo2_r1_250.png');
 	font-family:arial;
+}
+a{
+	border-bottom:1px solid deeppink;
+	text-decoration:none;
+	color:deeppink;
+}
+.holder{
+	background:#ffebef;
+	border:2px solid pink;
+	width:600px;
+	margin-top:20px;
+	padding:10px;
+}
+.holder:nth-of-type(1){
+	padding-bottom:0px;
+}
+.holder:nth-of-type(2){
+	margin-top:20px;
 }
 #desc{
 	width:600px;
+	text-align:left;
+}
+.descpic{
+	width:64px;
+	border:1px solid pink;
+	background:#fcdff3;
+	padding:5px;
+	margin-right:10px;
+	margin-left:3px;
 }
 #projects{
 	width:600px;
 }
 table, th, td{
-	border:1px solid black;
+	border:2px solid pink;
 	border-collapse:collapse;
 	padding:5px;
 	width:600px;
 	text-align:center;
-	background:white;
+	background:#fef6fc;
+}
+#table{
+	display:none;
+	margin-top:12px;
+}
+.button{
+	width:600px;
+	height:20px;
+	background:transparent;
+	border:none;
+	font-size:16px;
+}
+.button:focus{
+	outline:none;
 }
 </style>
 </head>
 <body>
 <center>
-<h1><br>Welcome!</h1>
-<p id="desc">My name is Eleanor Endres and I am an aspiring web developer/programmer studying computer science. Listed below is all of my completed projects.</p>
-<h1>Projects</h1>
-<table>
+<br>
+<div class="holder">
+<h1>𝒲𝑒𝓁𝒸𝑜𝓂𝑒!</h1>
+<p id="desc"><img src="https://data.whicdn.com/images/238443651/original.png" width="64px" align="left" class="descpic"/>Hello! My name is Elle and I'm an aspiring web developer and programmer. I've been coding since I was 13 and am currently seeking a computer science minor. This website is my dumping ground for all of my projects. Enjoy!</p>
+</div>
+<div class="holder">
+<button class="button" onclick="seeProjects()">Open Projects (+)</button>
+<table id="table">
 	<tr>
 		<th>Name</th>
 		<th>Description</th>
@@ -40,6 +88,22 @@ table, th, td{
 		<td>5/20/2018</td>
 	</tr>
 </table>
+</div>
 </center>
+<script>
+var open = false;
+function seeProjects(){
+	if (open == false){
+		document.getElementById("table").style.display = "table";
+		open = true;
+		document.getElementsByClassName("button")[0].innerHTML = "Close Projects (-)";
+	}
+	else {
+		document.getElementById("table").style.display= "none";
+		open = false;
+		document.getElementsByClassName("button")[0].innerHTML = "Open Projects (+)";
+	}
+}
+</script>
 </body>
 </html>
