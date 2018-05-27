@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png">
+<title>Calculator</title>
+<style type="text/css">
+body{
+	font-size:20px;
+	background:url('https://78.media.tumblr.com/276cc2ecee48cb1a149cf94640066906/tumblr_movdbcThVO1ru3nbdo3_250.png');
+}
+#calculator{
+	width:250px;
+	height:300px;
+	border:1px solid black;
+	background:whitesmoke;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	margin-top:50px;
+	padding:20px;
+}
+#display{
+	width:228px;
+	height:30px;
+	background:white;
+	border:1px solid black;
+	font-size:25px;
+	text-align:right;
+	padding:10px;
+	letter-spacing:1px;
+}
+td{
+	border:1px solid black;
+	background:white;
+	padding:10px;
+	box-shadow:0 5px #999;
+	cursor:default;
+	width:30px;
+}
+td:active{
+	box-shadow:0 3px #666;
+	transform:translateY(3px);
+}
+table{
+	width:269px;
+	margin-left:-9px;
+	margin-top:5px;
+	border-spacing:10px 15px;
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<div id="calculator">
+	<div id="display"></div>
+	<table id="calc">
+		<tr>
+			<td onclick="num(1)">1</td>
+			<td onclick="num(2)">2</td>
+			<td onclick="num(3)">3</td>
+			<td onclick="Add()">+</td>
+		</tr>
+		<tr>
+			<td onclick="num(4)">4</td>
+			<td onclick="num(5)">5</td>
+			<td onclick="num(6)">6</td>
+			<td onclick="Subtract()">-</td>
+		</tr>
+		<tr>
+			<td onclick="num(7)">7</td>
+			<td onclick="num(8)">8</td>
+			<td onclick="num(9)">9</td>
+			<td onclick="Multiply()">x</td>
+		</tr>
+		<tr>
+			<td onclick="clearScreen()">CE</td>
+			<td onclick="num(0)">0</td>
+			<td onclick="Evaluate()">=</td>
+			<td onclick="Divide()">÷</td>
+		</tr>
+	</table>
+</div>
+<script>
+function num(number){
+	var display = document.getElementById("display").innerHTML;
+	document.getElementById("display").innerHTML = display + number;
+}
+function clearScreen(){
+	document.getElementById("display").innerHTML = "";
+}
+function Add(){
+	var display = document.getElementById("display").innerHTML;
+	document.getElementById("display").innerHTML = display + "+";
+}
+function Subtract(){
+	var display = document.getElementById("display").innerHTML;
+	document.getElementById("display").innerHTML = display + "-";
+}
+function Multiply(){
+	var display = document.getElementById("display").innerHTML;
+	document.getElementById("display").innerHTML = display + "x";
+}
+function Divide(){
+	var display = document.getElementById("display").innerHTML;
+	document.getElementById("display").innerHTML = display + "÷";
+}
+function Evaluate(){
+	var equation = document.getElementById("display").innerHTML;
+	equation = equation.replace(/x/gi, "*");
+	equation = equation.replace(/÷/gi, "/");
+	var result = eval(equation);
+	document.getElementById("display").innerHTML = result;
+}
+</script>
+</body>
+</html>
