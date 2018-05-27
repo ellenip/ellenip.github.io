@@ -1,24 +1,22 @@
 <html>
 <head>
-<link rel="icon" href="https://78.media.tumblr.com/tumblr_m230ubCgNR1qfamg6.gif"/>
-<title>Elle's projects</title>
+<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<title>Projects</title>
 <style type="text/css">
 *{
 	transition: 0.2s linear;
 }
 body{
-	background-image:url('https://78.media.tumblr.com/3b627fa2140cf18ad9dc4d8137619b81/tumblr_noxf4sgyN21ru3nbdo2_r1_250.png');
-	font-family:arial;
+	background-image:url('https://78.media.tumblr.com/276cc2ecee48cb1a149cf94640066906/tumblr_movdbcThVO1ru3nbdo3_250.png');
+	font-family:verdana;
 }
 a{
-	border-bottom:1px solid deeppink;
+	border-bottom:1px solid #999;
 	text-decoration:none;
-	color:deeppink;
+	color:#999;
 }
 .holder{
-	background:#ffebef;
-	border:2px solid pink;
-	width:600px;
+	width:100%;
 	margin-top:20px;
 	padding:10px;
 }
@@ -29,22 +27,9 @@ a{
 	margin-top:20px;
 }
 #desc{
-	width:600px;
+	width:80%;
 	text-align:left;
-}
-.descpic{
-	width:64px;
-	border:2px solid pink;
-	background:#fcdff3;
-	padding:5px;
-	margin-right:10px;
-	margin-left:3px;
-}
-.descpic2{
-	width:50px;
-	margin-right:5px;
-	margin-top:5px;
-	-webkit-filter:brightness(150%);
+	text-align:center;
 }
 #projects{
 	width:600px;
@@ -53,12 +38,12 @@ a{
 	cursor:pointer;
 }
 table, th, td{
-	border:2px solid pink;
+	border:2px solid #ccc;
 	border-collapse:collapse;
 	padding:5px;
 	width:600px;
 	text-align:center;
-	background:#fef6fc;
+	background:whitesmoke;
 }
 #table{
 	display:none;
@@ -74,17 +59,21 @@ table, th, td{
 .button:focus{
 	outline:none;
 }
+.contacts{
+	display:none;
+	margin-top:20px;
+}
 </style>
 </head>
 <body>
 <center>
 <br>
 <div class="holder">
-<h1>𝒲𝑒𝓁𝒸𝑜𝓂𝑒!</h1>
-<p id="desc"><img src="https://data.whicdn.com/images/238443651/original.png" width="64px" align="left" class="descpic"/><img src="https://78.media.tumblr.com/5c4ddcc6f1480a3ef05d5255aab2ae5b/tumblr_inline_mju0ifLDZt1roozkr.gif" width="64px" align="right" class="descpic2"/>Hello! My name is Elle and I'm an aspiring web developer and programmer. I've been coding since I was 13 (19 now) and am currently seeking a computer science minor. This website is my dumping ground for all of my projects and updates whenever I complete a new one. Enjoy!</p>
+<h1>Welcome!</h1>
+<p id="desc">Hello! My name is Eleanor Endres and I'm an aspiring web developer and programmer. I've been coding since I was 13 years old and am currently seeking a computer science minor at UMBC. This website is my dumping ground for all of my projects and updates whenever I complete a new one. Enjoy!</p>
 </div>
 <div class="holder">
-<button class="button" onclick="seeProjects()">Open Projects (+)</button>
+<button class="button" onclick="seeProjects()">Show Projects (+)</button>
 <table id="table">
 	<tr>
 		<th>Name</th>
@@ -106,21 +95,63 @@ table, th, td{
 		<td>N/A</td>
 		<td>N/A</td>
 	</tr>
+	<tr>
+		<td><a href="">Project 4</a></td>
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td><a href="">Project 5</a></td>
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td><a href="">Project 6</a></td>
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td><a href="">Project 7</a></td>
+		<td>N/A</td>
+		<td>N/A</td>
+	</tr>
 </table>
+</div>
+<div class="holder">
+<button class="button" onclick="seeContacts()">Show Contact Info (+)</button>
+<p class="contacts">
+endreseleanor@gmail.com
+</p>
 </div>
 </center>
 <script>
-var open = false;
+var open1 = false;
+
 function seeProjects(){
-	if (open == false){
+	if (open1 == false){
 		document.getElementById("table").style.display = "table";
-		open = true;
-		document.getElementsByClassName("button")[0].innerHTML = "Close Projects (-)";
+		open1 = true;
+		document.getElementsByClassName("button")[0].innerHTML = "Hide Projects (-)";
 	}
 	else {
 		document.getElementById("table").style.display= "none";
-		open = false;
-		document.getElementsByClassName("button")[0].innerHTML = "Open Projects (+)";
+		open1 = false;
+		document.getElementsByClassName("button")[0].innerHTML = "Show Projects (+)";
+	}
+}
+
+var open2 = false;
+
+function seeContacts(){
+	if (open2 == false){
+		document.getElementsByClassName("contacts")[0].style.display="block";
+		open2 = true;
+		document.getElementsByClassName("button")[1].innerHTML = "Hide Contact Info (-)";
+	}
+	else {
+		document.getElementsByClassName("contacts")[0].style.display="none";
+		open2 = false;
+		document.getElementsByClassName("button")[1].innerHTML = "Show Contact Info (+)";
 	}
 }
 </script>
