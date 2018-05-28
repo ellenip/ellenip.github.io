@@ -1,90 +1,8 @@
 <html>
 <head>
 <link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<link rel="stylesheet" href="index.css"/>
 <title>Welcome</title>
-<style type="text/css">
-*{
-	transition: 0.2s linear;
-}
-::-webkit-scrollbar{
-	width:8px;
-	height:0px;
-}
-::-webkit-scrollbar-track{
-	background:#ccc;
-}
-::-webkit-scrollbar-thumb{
-	background:darkgray;
-	border-right:1px solid gray;
-	border-top:1px solid gray;
-	border-bottom:1px solid gray;
-}
-body{
-	background-image:url('https://78.media.tumblr.com/276cc2ecee48cb1a149cf94640066906/tumblr_movdbcThVO1ru3nbdo3_250.png');
-	font-family:verdana;
-}
-a{
-	border-bottom:1px solid #999;
-	text-decoration:none;
-	color:#999;
-}
-.holder{
-	width:100%;
-	margin-top:20px;
-	padding:10px;
-}
-.holder:nth-of-type(1){
-	padding-bottom:0px;
-}
-.holder:nth-of-type(2){
-	margin-top:20px;
-}
-.holder:nth-of-type(3){
-	margin-top:0px;
-}
-#desc{
-	width:80%;
-	text-align:left;
-	text-align:center;
-}
-#projects{
-	width:600px;
-}
-.button:hover{
-	cursor:pointer;
-}
-table, th, td{
-	border:1px solid black;
-	border-collapse:collapse;
-	padding:5px;
-	width:600px;
-	text-align:center;
-	background:whitesmoke;
-}
-#table{
-	display:none;
-	margin-top:0px;
-}
-#projectslist{
-	width:608px;
-	height:auto;
-	margin-top:12px;
-}
-.button{
-	width:600px;
-	height:20px;
-	background:transparent;
-	border:none;
-	font-size:16px;
-}
-.button:focus{
-	outline:none;
-}
-.contacts{
-	display:none;
-	margin-top:20px;
-}
-</style>
 </head>
 <body>
 <center>
@@ -147,40 +65,6 @@ endreseleanor@gmail.com
 </p>
 </div>
 </center>
-<script>
-var open1 = false;
-
-function seeProjects(){
-	if (open1 == false){
-		document.getElementById("table").style.display = "table";
-		document.getElementById("projectslist").style.height="180px";
-		document.getElementById("projectslist").style.overflow="scroll";
-		open1 = true;
-		document.getElementsByClassName("button")[0].innerHTML = "Hide Projects (-)";
-	}
-	else {
-		document.getElementById("table").style.display= "none";
-		open1 = false;
-		document.getElementsByClassName("button")[0].innerHTML = "Show Projects (+)";
-		document.getElementById("projectslist").style.height="auto";
-		document.getElementById("projectslist").style.overflow="auto";
-	}
-}
-
-var open2 = false;
-
-function seeContacts(){
-	if (open2 == false){
-		document.getElementsByClassName("contacts")[0].style.display="block";
-		open2 = true;
-		document.getElementsByClassName("button")[1].innerHTML = "Hide Contact Info (-)";
-	}
-	else {
-		document.getElementsByClassName("contacts")[0].style.display="none";
-		open2 = false;
-		document.getElementsByClassName("button")[1].innerHTML = "Show Contact Info (+)";
-	}
-}
-</script>
+<script src="index.js"></script>
 </body>
 </html>
