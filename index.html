@@ -6,6 +6,19 @@
 *{
 	transition: 0.2s linear;
 }
+::-webkit-scrollbar{
+	width:8px;
+	height:0px;
+}
+::-webkit-scrollbar-track{
+	background:#ccc;
+}
+::-webkit-scrollbar-thumb{
+	background:darkgray;
+	border-right:1px solid gray;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+}
 body{
 	background-image:url('https://78.media.tumblr.com/276cc2ecee48cb1a149cf94640066906/tumblr_movdbcThVO1ru3nbdo3_250.png');
 	font-family:verdana;
@@ -26,6 +39,9 @@ a{
 .holder:nth-of-type(2){
 	margin-top:20px;
 }
+.holder:nth-of-type(3){
+	margin-top:0px;
+}
 #desc{
 	width:80%;
 	text-align:left;
@@ -38,7 +54,7 @@ a{
 	cursor:pointer;
 }
 table, th, td{
-	border:2px solid #ccc;
+	border:1px solid black;
 	border-collapse:collapse;
 	padding:5px;
 	width:600px;
@@ -47,6 +63,11 @@ table, th, td{
 }
 #table{
 	display:none;
+	margin-top:0px;
+}
+#projectslist{
+	width:608px;
+	height:auto;
 	margin-top:12px;
 }
 .button{
@@ -74,6 +95,7 @@ table, th, td{
 </div>
 <div class="holder">
 <button class="button" onclick="seeProjects()">Show Projects (+)</button>
+<div id="projectslist">
 <table id="table">
 	<tr>
 		<th>Name</th>
@@ -81,9 +103,9 @@ table, th, td{
 		<th>Date posted</th>
 	</tr>
 	<tr>
-		<td><a href="https://ellepop.github.io/sheep">Sheep</a></td>
-		<td>Fight a sheep</td>
-		<td>5/20/2018</td>
+		<td><a href="https://ellemarie.github.io/calculator">Calculator</a></td>
+		<td>A simple calculator</td>
+		<td>5/27/2018</td>
 	</tr>
 	<tr>
 		<td><a href="">Project 2</a></td>
@@ -117,6 +139,7 @@ table, th, td{
 	</tr>
 </table>
 </div>
+</div>
 <div class="holder">
 <button class="button" onclick="seeContacts()">Show Contact Info (+)</button>
 <p class="contacts">
@@ -130,6 +153,8 @@ var open1 = false;
 function seeProjects(){
 	if (open1 == false){
 		document.getElementById("table").style.display = "table";
+		document.getElementById("projectslist").style.height="180px";
+		document.getElementById("projectslist").style.overflow="scroll";
 		open1 = true;
 		document.getElementsByClassName("button")[0].innerHTML = "Hide Projects (-)";
 	}
@@ -137,6 +162,8 @@ function seeProjects(){
 		document.getElementById("table").style.display= "none";
 		open1 = false;
 		document.getElementsByClassName("button")[0].innerHTML = "Show Projects (+)";
+		document.getElementById("projectslist").style.height="auto";
+		document.getElementById("projectslist").style.overflow="auto";
 	}
 }
 
