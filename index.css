@@ -43,7 +43,7 @@ a{
 	text-align:center;
 }
 #projects{
-	width:600px;
+	width:800px;
 }
 .button:hover{
 	cursor:pointer;
@@ -52,7 +52,7 @@ table, th, td{
 	border:1px solid black;
 	border-collapse:collapse;
 	padding:5px;
-	width:600px;
+	width:800px;
 	text-align:center;
 	background:whitesmoke;
 }
@@ -61,12 +61,12 @@ table, th, td{
 	margin-top:0px;
 }
 #projectslist{
-	width:608px;
+	width:808px;
 	height:auto;
 	margin-top:12px;
 }
 .button{
-	width:600px;
+	width:800px;
 	height:20px;
 	background:transparent;
 	border:none;
