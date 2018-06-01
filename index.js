@@ -3,7 +3,7 @@ var open1 = false;
 function seeProjects(){
 	if (open1 == false){
 		document.getElementById("table").style.display = "table";
-		document.getElementById("projectslist").style.height="198px";
+		document.getElementById("projectslist").style.height="180px";
 		document.getElementById("projectslist").style.overflow="scroll";
 		open1 = true;
 		document.getElementsByClassName("button")[0].innerHTML = "Hide Projects (-)";
