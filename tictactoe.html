@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<link rel="stylesheet" type="text/css" href="tictactoe.css">
+<title>Title</title>
+</head>
+<body onload="setTimeout(addO, 500, 'yes')">
+<div id="scoreboard">
+	<table id="score">
+		<tr>
+			<td id="score1">0</td>
+			<td id="text">Start!</td>
+			<td id="score2">0</td>
+		</tr>
+	</table>
+</div>
+<table id="table">
+	<tr>
+		<td id="1" onclick="addX(1)"></td>
+		<td id="2" onclick="addX(2)"></td>
+		<td id="3" onclick="addX(3)"></td>
+	</tr>
+	<tr>
+		<td id="4" onclick="addX(4)"></td>
+		<td id="5" onclick="addX(5)"></td>
+		<td id="6" onclick="addX(6)"></td>
+	</tr>
+	<tr>
+		<td id="7" onclick="addX(7)"></td>
+		<td id="8" onclick="addX(8)"></td>
+		<td id="9" onclick="addX(9)"></td>
+	</tr>
+</table>
+<div id="buttonscontainer">
+	<div class="buttons" onclick="reset()">Reset</div>
+</div>
+<script src="tictactoe.js">
+</script>
+</body>
+</html>
