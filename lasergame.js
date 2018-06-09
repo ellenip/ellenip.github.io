@@ -247,14 +247,14 @@ function player(width, height, color, x, y) {
 		//Laser
 		if (myGameArea.keys && myGameArea.keys[90] && facingright == true && pause == false) {
 			ctx.fillStyle = "red";
-			ctx.fillRect(this.x + 50, this.y + 8, 400, 3);
+			ctx.fillRect(this.x + 50, this.y + 8, 600, 3);
 			if (enemyhealth > 0 && myEnemy.x < 570) {
 				enemyhealth--;
 			}
 		}
 		else if (myGameArea.keys && myGameArea.keys[90] && facingright == false && pause == false) {
 			ctx.fillStyle = "red";
-			ctx.fillRect(this.x - 20, this.y + 8, -400, 3);
+			ctx.fillRect(this.x - 20, this.y + 8, -600, 3);
 			if (enemyhealth2 > 0 && myEnemy2.x > 0) {
 				enemyhealth2--;
 			}
