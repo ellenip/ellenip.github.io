@@ -31,3 +31,26 @@ function seeContacts(){
 		document.getElementsByClassName("button")[1].innerHTML = "Show Contact Info (+)";
 	}
 }
+
+var bday = new Date(2018, 5, 26);
+var bday2 = new Date(2019, 5, 26);
+var bday3 = new Date(2020, 5, 26);
+var today = new Date();
+var currentyear = today.getFullYear();
+var currentmonth = today.getMonth();
+var currentday = today.getDate();
+
+var currentdate = new Date(currentyear, currentmonth, currentday);
+
+if (bday > currentdate) {
+		document.getElementById("age").innerHTML = "19";
+}
+else if (currentdate > bday && currentdate < bday2) {
+		document.getElementById("age").innerHTML = "20";
+}
+else if (currentdate > bday2 && currentdate < bday3) {
+		document.getElementById("age").innerHTML = "21";
+}
+else if (currentdate > bday3) {
+		document.getElementById("age").innerHTML = "22";
+}
