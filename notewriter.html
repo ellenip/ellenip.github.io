@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<link rel="stylesheet" href="notewriter.css"/>
+<title>Write a note</title>
+</head>
+<body onload="draw()">
+<div id="container">
+<h1>Write a note</h1>
+<h2>(Right click to save image)</h2>
+<textarea id="textinput" rows="4" cols="28" onmouseover="showNote()" onmouseout="hideNote()"></textarea><div id="note">* Press enter for every line break</div><br><br>
+<div id="buttonscontainer">
+<button onclick="addText()" class="write">Write</button>&nbsp;
+<button onclick="clearText()" class="write">Clear</button>
+</div>
+<canvas id="thecanvas" width="300px" height="300px"></canvas>
+<div id="colorscontainer">
+	<div class="color" onclick="orange()"></div>
+	<div class="color" onclick="blue()"></div>
+	<div class="color" onclick="purple()"></div>
+	<div class="color" onclick="green()"></div>
+	<div class="color" onclick="pink()"></div>
+</div>
+<script src="notewriter.js">
+</script>
+</body>
+</html>
