@@ -44,7 +44,7 @@ table, th, td{
 table{
 	width:500px;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:600px){
 table{
 	width:95%;
 }
