@@ -1,12 +1,13 @@
 body{
 	font-size:20px;
-	background:url('https://78.media.tumblr.com/276cc2ecee48cb1a149cf94640066906/tumblr_movdbcThVO1ru3nbdo3_250.png');
+	background:black;
+	color:pink;
 }
 #calculator{
 	width:250px;
 	height:300px;
-	border:1px solid black;
-	background:whitesmoke;
+	border:1px solid cyan;
+	background:black;
 	position:absolute;
 	left:50%;
 	transform:translateX(-50%);
@@ -16,23 +17,23 @@ body{
 #display{
 	width:228px;
 	height:30px;
-	background:white;
-	border:1px solid black;
+	background:black;
+	border:1px solid cyan;
 	font-size:25px;
 	text-align:right;
 	padding:10px;
 	letter-spacing:1px;
 }
 td{
-	border:1px solid black;
-	background:white;
+	border:1px solid cyan;
+	background:black;
 	padding:10px;
-	box-shadow:0 5px #999;
+	width:25%;
+	box-shadow:0 5px #00b1b1;
 	cursor:default;
-	width:30px;
 }
 td:active{
-	box-shadow:0 3px #666;
+	box-shadow:0 3px #008989;
 	transform:translateY(3px);
 }
 table{
@@ -41,4 +42,26 @@ table{
 	margin-top:5px;
 	border-spacing:10px 15px;
 	text-align:center;
+}
+@media screen and (max-width:600px){
+	body{
+		font-size:30px;
+	}
+	td{
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+	#calculator{
+		width:80%;
+		height:80%;
+	}
+	table{
+		width:104%;
+	}
+	#display{
+		width:94%;
+		margin-top:1%;
+		font-size:200%;
+		height:15%;
+	}
 }
