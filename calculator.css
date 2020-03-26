@@ -53,15 +53,21 @@ table{
 	}
 	#calculator{
 		width:80%;
-		height:80%;
+		height:83%;
 	}
 	table{
-		width:104%;
+		width:105%;
+		margin-left:50%;
+		transform:translateX(-50%);
+		border-spacing:15px 20px;
 	}
 	#display{
-		width:94%;
+		width:auto;
+		position:relative;
+		left:50%;
+		transform:translateX(-50%);
 		margin-top:1%;
 		font-size:200%;
-		height:15%;
+		height:14%;
 	}
 }
