@@ -19,7 +19,7 @@ body{
 	height:30px;
 	background:black;
 	border:1px solid cyan;
-	font-size:25px;
+	font-size:28px;
 	text-align:right;
 	padding:10px;
 	letter-spacing:1px;
@@ -67,7 +67,7 @@ table{
 		left:50%;
 		transform:translateX(-50%);
 		margin-top:1%;
-		font-size:200%;
+		font-size:170%;
 		height:14%;
 	}
 }
