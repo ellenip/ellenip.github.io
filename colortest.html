@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://78.media.tumblr.com/d2e5023abd40c356888db65ac52026f1/tumblr_inline_mg8d43TZUw1rx2fz3.png"/>
+<link rel="stylesheet" href="colortest.css"/>
+<title>Projects</title>
+</head>
+<body>
+<center>
+
+<p id="title">Color Mind Test</p>
+<p id="desc">Directions:<br>A word will be shown.<br>Select the <font color="yellow">color</font> of the word,<br>not the color that is written.</p>
+
+<button onclick="myTimer();" class="start">Start</button><br>
+
+<div id="blocker"></div>
+
+<div class="word">yellow</div>
+<div class="word">blue</div>
+<div class="word">red</div>
+<div class="word">green</div>
+<div class="word">purple</div>
+<div class="word">orange</div>
+
+<button onclick="select('yellow')" class="options">yellow</button>
+<button onclick="select('blue');" class="options">blue</button><br>
+<button onclick="select('red');" class="options">red</button>
+<button onclick="select('green');" class="options">green</button><br>
+<button onclick="select('purple');" class="options">purple</button>
+<button onclick="select('orange');" class="options">orange</button>
+
+<p id="results"></p>
+
+</center>
+<script src="colortest.js"></script>
+</body>
+</html>
