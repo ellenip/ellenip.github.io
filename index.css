@@ -28,13 +28,13 @@ a{
 #desc{
 	width:500px;
 	text-align:center;
-	border:1px solid cyan;
+	border:2px solid cyan;
 	background:black;
 	padding-top:20px;
 	padding-bottom:20px;
 }
 table, th, td{
-	border:1px solid cyan;
+	border:2px solid cyan;
 	border-collapse:collapse;
 	padding:10px;
 	text-align:center;
